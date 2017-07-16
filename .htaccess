@@ -1,0 +1,13 @@
+RewriteEngine On
+
+Options +FollowSymLinks 
+ 
+RewriteEngine On 
+
+# abc.joaopedropereira.com --> /subs/abc/
+ 
+RewriteCond %{HTTP_HOST} !^(www\.)?apon\.com.br$ [NC] 
+RewriteCond %{HTTP_HOST} ^([^\.]+)\.apon\.com.br$ [NC] 
+RewriteCond %1:::%{REQUEST_URI} !^(.+):::/subs/\1(/.*)?$ [NC] 
+RewriteCond %{DOCUMENT_ROOT}/subs/%1/ -d 
+RewriteRule ^(.*)$ /subs/%1/$1 [QSA,L]

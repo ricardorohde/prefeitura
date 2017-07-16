@@ -1,0 +1,50 @@
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    header .header .brasao{
+    width: 100%;
+    text-align: center;
+}
+header .header .brasao a{
+	
+padding-bottom: 5px;
+}
+header .header .brasao img {
+    display: inline-block;
+}
+
+header .header .links {
+    display: none;
+    }
+
+.box_topo .sy-box{
+	margin-bottom: 10px;
+}
+
+.box_topo .links li a{
+    height: auto;
+}
+
+.box_topo .links li a img{
+    height: 50px;
+    margin-bottom: 5px;
+}
+    
+    .linksprincipais{}
+    
+    .linksprincipais li{}
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+ 
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1200px) {
+  .sy-slides-wrap {
+    height: 350px;
+	}
+	.sy-slide > a > img{
+		height: 350px;
+	}
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2015 by original authors @ fontello.com</metadata>
+<defs>
+<font id="aponicon" horiz-adv-x="1000" >
+<font-face font-family="aponicon" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="apon-logo" unicode="&#xa1;" d="m1275 1077c-401 0-727-326-727-727s326-727 727-727c401 0 727 326 727 727s-326 727-727 727z m-615-746l1017 421-547-493-470 72z m1017 421l-421-1017-72 469 493 548z" horiz-adv-x="2551" />
+</font>
+</defs>
+</svg>

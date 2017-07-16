@@ -1,0 +1,24 @@
+{
+  "name": "aponicon",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "a93e3ed8cc55b9cbd3147808695cebd8",
+      "css": "apon-logo",
+      "code": 161,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M1275-226.8C873.7-226.8 548.3 98.6 548.3 500S873.7 1226.8 1275 1226.8C1676.4 1226.8 2001.8 901.4 2001.8 500S1676.4-226.8 1275-226.8ZM659.9 519.1L1677.4 97.7 1129.6 591.5 659.9 519.2ZM1677.4 97.7L1255.9 1115.2 1183.7 646.1 1677.4 97.7Z",
+        "width": 2551
+      },
+      "search": [
+        "apon-logo-(1)"
+      ]
+    }
+  ]
+}
