@@ -1,6 +1,18 @@
 <header>
     <section class="topbar">
         <div class="container">
+            <div id="font-setting-buttons">
+				<ul>
+                    <li><a href="/ouvidoria/"><i class="fa fa-phone" aria-hidden="true"></i> Ouvidoria</a></li>    
+                    <li><span>Acessibilidade</span>
+                        <a class="decrease-me"><b>A-</b></a>
+                        <a class="reset-me" id='big'><b>Normal</b></a>
+                        <a class="increase-me" id='big'><b>A+</b></a>
+                        <a data-contraste="2" class="change-me"><b>Auto Contraste</b></a></li>
+                    <li><span><i class="fa fa-map-marker" aria-hidden="true"></i> Av. do Contorno 1212 - Centro</span></li>
+                    <li><span><i class="fa fa-clock-o" aria-hidden="true"></i> Das 08:00 as 12:00-14:00 as 18:00</span></li>
+                </ul>
+            </div>
         </div>
     </section>
     <section class="header">

@@ -32,3 +32,21 @@
   js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9&appId=1828545577414262";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+<script src="/lib/Lightweight-jQuery-Font-Accessibility-Plugin-EasyView/EasyView.js"></script>
+<script>
+	$(function(){
+
+		/* Custom buttons */
+		$('#font-setting-buttons').easyView({
+			container: 'body',
+            bootstrap: true,
+            tags: ['h1','h2','h3','h4','h5','h6', 'div', 'p', 'a', 'span', 'strong', 'em', 'ul', 'ol', 'li', 'section'],
+			increaseSelector: '.increase-me',
+			decreaseSelector: '.decrease-me',
+			normalSelector: '.reset-me',
+			contrastSelector: '.change-me'
+		});
+
+	});
+	</script>

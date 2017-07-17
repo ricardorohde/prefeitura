@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/teste/jalendar/style/jalendar.css" type="text/css" />
     <script type="text/javascript" src="/teste/jalendar/js/jalendar.min.js"></script>
 </head>
-<body>
+<body id="buttons">
 
 <?php 
     include"modulos/header.php";
@@ -192,10 +192,6 @@
             slidesToScroll: 1
           });
     });
-    $(document).ready(function() {
-        $('select').material_select();
-    });
-    
     
     $('#yourId').jalendar({
     customDay: '07/12/2017',
