@@ -11,7 +11,7 @@
     <title><?php echo $sitenome ?></title>
 
     <?php include"includes/head.php"; ?>
-    <link rel="stylesheet" href="/css/table.css" type="text/css" />
+    
     <script src="/lib/slippry-1.4.0/dist/slippry.min.js"></script>
     <link rel="stylesheet" href="/lib/slippry-1.4.0/dist/slippry.css">
     <link rel="stylesheet" type="text/css" href="/lib/slick-1.6.0/slick/slick.css">
