@@ -20,7 +20,7 @@ header .header .links {
 }
 
 .box_topo .links li a{
-    height: auto;
+    height: 100%;
 }
 
 .box_topo .links li a img{
@@ -38,6 +38,7 @@ header .header .links {
 }
     .linksprincipais .linkitem span{
     width: 100%;
+    max-width: 100%;
     text-align: center;
     font-size: 0.8em;
 }
@@ -47,6 +48,13 @@ header .header .links {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+    }
+    
+    .sec_full{}
+    
+    .sec_full div.container{
+        padding-left: 0!important;
+        padding-right: 0!important;
     }
 }
 

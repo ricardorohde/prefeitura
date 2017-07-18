@@ -18,9 +18,13 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+.slick-slider.slick-arrowed {
+    padding-top: 30px;
+}
+
 .slick-slider .slick-arrow {
     position: absolute;
-    top: -40px;
+    top: -10px;
     height: 30px;
     padding: 3px 10px;
     background: #fff;
@@ -28,11 +32,11 @@
 }
 
 .slick-slider .slick-arrow.slick-prev {
-    right: 35px;
+    left: calc(50% - 35px);
 }
 
 .slick-slider .slick-arrow.slick-next {
-    right: 0;
+    right: calc(50% - 35px);
 }
 
 .slick-list

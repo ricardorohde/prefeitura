@@ -94,7 +94,7 @@ header .topbar ul li:first-child {
     padding-left: 0;
 }
 
-header .topbar ul li a {display: table-cell;padding: 6px 5px;font-size: 0.800em;font-weight: 700;color: #777;line-height: 26px;float: left;height: 40px;}
+header .topbar ul li a {display: table-cell;padding: 6px 5px;font-size: 11px;font-weight: 700;color: #777;line-height: 26px;float: left;height: 40px;}
 
 header .topbar ul li a b {
     float: left;
@@ -107,7 +107,7 @@ header .topbar ul li a b {
 
 header .topbar ul li i {}
 
-header .topbar ul li span {float: left;display: table-cell;vertical-align: middle;padding: 6px 10px;font-size: 0.800em;font-weight: 500;color: #777;line-height: 28px;}
+header .topbar ul li span {float: left;display: table-cell;vertical-align: middle;padding: 6px 10px;font-size: 11px;font-weight: 500;color: #777;line-height: 28px;}
 
 header .header{
     width: 100%;
@@ -286,10 +286,13 @@ nav{
     
 }
 
-.box_topo .links ul {}
+.box_topo .links ul {
+    margin-bottom: 0;
+}
 
 .box_topo .links li{
     
+margin-bottom: 10px;
 }
 
 .box_topo .links li a{
@@ -422,8 +425,9 @@ ul.slick-dots li button {
 .modulo .titulo_modulo span{
     text-transform: uppercase;
     font-weight: 900;
-    color: #555;
-    font-size: 17px;
+    color: #3a7885;
+    padding: 0 5px;
+    font-size: 15px;
     line-height: 32px;
     display: inline-block;
     border-bottom: 3px solid #3a7885;
@@ -443,7 +447,9 @@ ul.slick-dots li button {
 
 .box_multimidia ul{}
 
-.box_multimidia ul li{}
+.box_multimidia ul li{
+    padding: 5px;
+}
 
 .box_multimidia li a{
     display: block;
@@ -726,6 +732,10 @@ ul.slick-dots li button {
 
 .noticia_destaque{}
 
+.noticia_destaque a{}
+
+.noticia_destaque a:hover{color: #3a7885;}
+
 .noticia_destaque .img{}
 
 .noticia_destaque .img img{
@@ -773,6 +783,10 @@ float: left;
     display: block;
     float: left;
     margin-bottom: 15px;
+}
+
+.mais_noticias .item > a:hover {
+    color: #3a7885;
 }
 
 .mais_noticias .item > a .img{

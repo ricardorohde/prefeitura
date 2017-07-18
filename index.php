@@ -35,18 +35,20 @@
                     </ul>
                 </div>
                 <div class="links col-md-5">
-                    <ul class="row">
-                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/nfe.png"><span>Nota Fiscal Eletrônica</span></a></li>
-                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/nfe.png"><span>Nota Fiscal Eletrônica</span></a></li>
-                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/nfe.png"><span>Nota Fiscal Eletrônica</span></a></li>
-                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/nfe.png"><span>Nota Fiscal Eletrônica</span></a></li>
+                    <ul class="row row-eq-height-m">
+                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/nfe.png"><span>Receitas e Despesas</span></a></li>
+                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/archive.svg"><span>Processos Licitatórios</span></a></li>
+                    </ul>
+                    <ul class="row row-eq-height-m">
+                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/law-book.svg"><span>Legislação</span></a></li>
+                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/salary.svg"><span>Despesas com Pessoal</span></a></li>
                     </ul>
                 </div>
                 
             </div>
         </div>
     </section>
-    <section class="box1 marginbottom_10">
+    <section class="box1 sec_full marginbottom_10">
         <div class="container">
             <div class="linksprincipais">
                 <div class="linkitem"><a><img src="/media/imagens/icones/clock.png"><span>Horários de Atendimento</span></a></div>
@@ -57,7 +59,7 @@
             </div>
         </div>
     </section>
-    <section class="paddingtb_10">
+    <section class="marginbottom_20">
         <div class="container">
             <div class="row">
                 <div class="col-md-9 col-e">
@@ -71,14 +73,16 @@
                         </div>
                         <div class="col-md-5 col-e">
                             <div class="noticia_destaque">
-                                <div class="img">
-                                    <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/02.jpg" ?>" />
-                                </div>
-                                <div class="info">
-                                    <h3>And this is some very long caption for slide 3. Yes, really long.</h3>
-                                    <i>18 de ago de 2017</i>
-                                    <span>Exemplo de Descrição</span>
-                                </div>
+                                <a>
+                                    <div class="img">
+                                        <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/02.jpg" ?>" />
+                                    </div>
+                                    <div class="info">
+                                        <h3>And this is some very long caption for slide 3. Yes, really long.</h3>
+                                        <i>18 de ago de 2017</i>
+                                        <span>Exemplo de Descrição</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-7 col-e col-d">
@@ -86,7 +90,7 @@
                                 <li class="item">
                                     <a>
                                         <div class="img">
-                                            <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/02.jpg" ?>" />
+                                            <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/01.jpg" ?>" />
                                         </div>
                                         <div class="info">
                                             <h3>And this is some very long caption for slide 3. Yes, really long.</h3>
@@ -108,7 +112,7 @@
                                 <li class="item">
                                     <a>
                                         <div class="img">
-                                            <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/02.jpg" ?>" />
+                                            <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/03.jpg" ?>" />
                                         </div>
                                         <div class="info">
                                             <h3>And this is some very long caption for slide 3. Yes, really long.</h3>
@@ -119,7 +123,7 @@
                                 <li class="item">
                                     <a>
                                         <div class="img">
-                                            <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/02.jpg" ?>" />
+                                            <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/04.jpg" ?>" />
                                         </div>
                                         <div class="info">
                                             <h3>And this is some very long caption for slide 3. Yes, really long.</h3>
@@ -155,13 +159,13 @@
             </div>
         </div>
     </section>
-    <section class="box_multimidia paddingtb_30">
+    <section class="box_multimidia sec_full paddingtb_30">
         <div class="container">
             <div class="titulo_section textcenter marginbottom_20">
                 <h2>Portal Multimídia</h2>
             </div>
-            <ul class="row">
-                <li class="col-md-3">
+            <ul id="box-multimidia">
+                <li>
                     <a href="#" >
                         <span class="hover"><i class="fa fa-video-camera" aria-hidden="true"></i> Assistir</span>
                         <img src="http://i1.ytimg.com/vi/YykjpeuMNEk/mqdefault.jpg">
@@ -171,7 +175,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="col-md-3">
+                <li>
                     <a href="#" >
                         <span class="hover"><i class="fa fa-video-camera" aria-hidden="true"></i> Assistir</span>
                         <img src="http://i1.ytimg.com/vi/60ItHLz5WEA/mqdefault.jpg">
@@ -181,7 +185,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="col-md-3">
+                <li>
                     <a href="#" >
                         <span class="hover"><i class="fa fa-video-camera" aria-hidden="true"></i> Assistir</span>
                         <img src="http://i1.ytimg.com/vi/fKopy74weus/mqdefault.jpg">
@@ -191,7 +195,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="col-md-3">
+                <li>
                     <a href="#" >
                         <span class="hover"><i class="fa fa-video-camera" aria-hidden="true"></i> Assistir</span>
                         <img src="http://i1.ytimg.com/vi/aR1ByHWOuSE/mqdefault.jpg">
@@ -229,6 +233,7 @@
 
         $(".linksprincipais").slick({
             dots: false,
+            arrows: false,
             slidesToShow: 5,
             slidesToScroll: 1,
             responsive: [
@@ -245,19 +250,18 @@
             ]
         });
         
-        $(".box_secretarias").slick({
+        $("#box-multimidia").slick({
             dots: false,
-            slidesToShow: 1,
+            slidesToShow: 4,
             slidesToScroll: 1,
             responsive: [
                 {
                     breakpoint: 750,
                     settings: {
-                        arrows: false,
-                        dots: true,
+                        dots: false,
                         centerMode: true,
                         centerPadding: '40px',
-                        slidesToShow: 2
+                        slidesToShow: 1
                     }
                 }
             ]
