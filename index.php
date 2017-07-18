@@ -25,7 +25,7 @@
     include"modulos/header.php";
 ?>
     <section class="box_topo">
-        <div class="container clearfix">
+        <div class="container">
             <div class="row">
                 <div class="box-slider col-md-7">
                     <ul id="slideprincipal">
@@ -46,7 +46,7 @@
             </div>
         </div>
     </section>
-    <section class="box1 marginbottom_30">
+    <section class="box1 marginbottom_10">
         <div class="container">
             <div class="linksprincipais">
                 <div class="linkitem"><a><img src="/media/imagens/icones/clock.png"><span>Horários de Atendimento</span></a></div>
@@ -57,59 +57,102 @@
             </div>
         </div>
     </section>
-    <section class="box2 paddingtb_30">
-        <div class="container clearfix">
+    <section class="paddingtb_10">
+        <div class="container">
             <div class="row">
-                <div class="col-md-3 col-xs-12 col-e">
-                    <div class="modulo mclaro">
-                        <div class="titulo_modulo">
-                            <span>Secretarias</span>
-                        </div>
-                        <div class="modulo-content">
-                            <div class="box_secretarias">
-                                <div class="item">
+                <div class="col-md-9 col-e">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="modulo">
+                                <div class="titulo_modulo">
+                                    <span>Mais Notícias</span>        
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-12">
-                    <div class="modulo mclaro box_editais">
-                        <div class="titulo_modulo">
-                            <span>Ultimas Publicações</span>
+                        <div class="col-md-5 col-e">
+                            <div class="noticia_destaque">
+                                <div class="img">
+                                    <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/02.jpg" ?>" />
+                                </div>
+                                <div class="info">
+                                    <h3>And this is some very long caption for slide 3. Yes, really long.</h3>
+                                    <i>18 de ago de 2017</i>
+                                    <span>Exemplo de Descrição</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modulo-content">
-                            <ul>
-                                <li>
-                                    <div class="detalhes">
-                                        <h3>Exemplo de Artigo</h3><span>Abertura: 10/07/2017</span>
-                                    </div>
-                                    <a class="vermais">Visualizar</a>
+                        <div class="col-md-7 col-e col-d">
+                            <ul class="mais_noticias">
+                                <li class="item">
+                                    <a>
+                                        <div class="img">
+                                            <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/02.jpg" ?>" />
+                                        </div>
+                                        <div class="info">
+                                            <h3>And this is some very long caption for slide 3. Yes, really long.</h3>
+                                            <i>18 de ago de 2017</i>
+                                        </div>
+                                    </a>
                                 </li>
-                                    
-                                <li><h3>Exemplo de Artigo</h3><span>Abertura: 10/07/2017</span></li>
-                                <li><h3>Exemplo de Artigo</h3><span>Abertura: 10/07/2017</span></li>
+                                <li class="item">
+                                    <a>
+                                        <div class="img">
+                                            <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/02.jpg" ?>" />
+                                        </div>
+                                        <div class="info">
+                                            <h3>And this is some very long caption for slide 3. Yes, really long.</h3>
+                                            <i>18 de ago de 2017</i>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a>
+                                        <div class="img">
+                                            <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/02.jpg" ?>" />
+                                        </div>
+                                        <div class="info">
+                                            <h3>And this is some very long caption for slide 3. Yes, really long.</h3>
+                                            <i>18 de ago de 2017</i>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a>
+                                        <div class="img">
+                                            <img src="<?php echo $siteurl ."/thumb.php?w=400&h=230&img=media/noticias/02.jpg" ?>" />
+                                        </div>
+                                        <div class="info">
+                                            <h3>And this is some very long caption for slide 3. Yes, really long.</h3>
+                                            <i>18 de ago de 2017</i>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-xs-12 col-d">
+                <div class="col-md-3 col-d">
                     <div class="modulo">
                         <div class="titulo_modulo">
                             <span>Agenda do Prefeito</span>
                         </div>
                         <div class="modulo-content">
                             <div id="yourId" class="jalendar">
-                                <div class="added-event" 
-                                    data-link="http://pikselmatik.com" 
-                                    data-date="10-07-2017" 
-                                    data-title="WWDC 13 on San Francisco, LA">
-                                </div>
+                                <?php
+                                    $list_ag = $dbh->prepare("SELECT * FROM pw_agenda ORDER BY pa_id ASC");
+                                    $list_ag->execute();
+                                        while ( $agenda = $list_ag->fetch(\PDO::FETCH_OBJ) )
+                                    {
+                                ?>
+                                    <div class="added-event" <?php if($agenda->pa_url != null){echo "data-link=\"".$agenda->pa_url."\"";} ?> data-date="<?php echo date("d-m-Y", strtotime($agenda->pa_data))?>" data-title="<?php echo $agenda->pa_titulo?>"></div>
+                                <?php
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>
     </section>
     <section class="box_multimidia paddingtb_30">
@@ -119,7 +162,7 @@
             </div>
             <ul class="row">
                 <li class="col-md-3">
-                    <a href="#" class="paddingbottom_20">
+                    <a href="#" >
                         <span class="hover"><i class="fa fa-video-camera" aria-hidden="true"></i> Assistir</span>
                         <img src="http://i1.ytimg.com/vi/YykjpeuMNEk/mqdefault.jpg">
                         <div class="detalhes">
@@ -129,7 +172,7 @@
                     </a>
                 </li>
                 <li class="col-md-3">
-                    <a href="#" class="paddingbottom_20">
+                    <a href="#" >
                         <span class="hover"><i class="fa fa-video-camera" aria-hidden="true"></i> Assistir</span>
                         <img src="http://i1.ytimg.com/vi/60ItHLz5WEA/mqdefault.jpg">
                         <div class="detalhes">
@@ -139,7 +182,7 @@
                     </a>
                 </li>
                 <li class="col-md-3">
-                    <a href="#" class="paddingbottom_20">
+                    <a href="#" >
                         <span class="hover"><i class="fa fa-video-camera" aria-hidden="true"></i> Assistir</span>
                         <img src="http://i1.ytimg.com/vi/fKopy74weus/mqdefault.jpg">
                         <div class="detalhes">
@@ -149,7 +192,7 @@
                     </a>
                 </li>
                 <li class="col-md-3">
-                    <a href="#" class="paddingbottom_20">
+                    <a href="#" >
                         <span class="hover"><i class="fa fa-video-camera" aria-hidden="true"></i> Assistir</span>
                         <img src="http://i1.ytimg.com/vi/aR1ByHWOuSE/mqdefault.jpg">
                         <div class="detalhes">
@@ -204,7 +247,7 @@
         
         $(".box_secretarias").slick({
             dots: false,
-            slidesToShow: 5,
+            slidesToShow: 1,
             slidesToScroll: 1,
             responsive: [
                 {
@@ -223,8 +266,6 @@
     
     $('#yourId').jalendar({
     customDay: '07/12/2017',
-    color: '#577e9a', // Unlimited
-    color2: '#57c8bf', // Unlimited
     lang: 'PT',
     sundayStart: true
 });

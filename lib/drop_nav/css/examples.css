@@ -18,13 +18,13 @@
 	background-color: #A0D468;
 }
 
-.info{
+.navigation .info{
 	padding-left: 15px;
 	color: #fff;
 	font-size: 13px;
 	text-align: center;
 }
-.info span{
+.navigation .info span{
 	text-decoration: underline;
 }
 
