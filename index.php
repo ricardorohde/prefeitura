@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="/lib/slippry-1.4.0/dist/slippry.css">
     <link rel="stylesheet" type="text/css" href="/lib/slick-1.6.0/slick/slick.css">
     
-    <link rel="stylesheet" href="/teste/jalendar/style/jalendar.css" type="text/css" />
-    <script type="text/javascript" src="/teste/jalendar/js/jalendar.min.js"></script>
+    <link rel="stylesheet" href="/lib/jalendar/style/jalendar.css" type="text/css" />
+    <script type="text/javascript" src="/lib/jalendar/js/jalendar.min.js"></script>
 </head>
 <body id="buttons">
 
