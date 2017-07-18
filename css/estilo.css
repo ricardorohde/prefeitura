@@ -327,18 +327,11 @@ nav{
     width: 100%;
 }
 
-.linksprincipais ul {
-    margin-bottom: 0;
-    display: block;
+
+.linksprincipais .slick-slide{
 }
 
-.linksprincipais li{
-    line-height: 70px;
-    float: left;
-    width: 20%;
-}
-
-.linksprincipais li a{
+.linksprincipais .slick-slide a{
     float: left;
     padding: 10px;
     width: calc(100% - 2px);
@@ -347,17 +340,18 @@ nav{
     color: #777;
     line-height: 70px;
     background: #f0f0f0;
+    height: 100%;
 }
-.linksprincipais li:first-child a{
+.linksprincipais .linkitem:first-child a{
     border-radius: 3px 0 0 3px;
 }
-.linksprincipais li:last-child a {
+.linksprincipais .linkitem:last-child a {
     margin-right: 0;
     width: 100%;
     border-radius: 0 3px 3px 0;
 }
 
-.linksprincipais li img{
+.linksprincipais .linkitem img{
     width: 50px;
     margin-right: 10px;
     display: inline-block;
@@ -365,13 +359,35 @@ nav{
     line-height: normal;
 }
 
-.linksprincipais li span{
+.linksprincipais .linkitem span{
     font-size: 0.9375em;
     font-weight: 500;
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
     text-align: left;
+}
+
+ul.slick-dots{
+    text-align: center;
+    margin-top: 10px;
+}
+
+ul.slick-dots li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+}
+
+ul.slick-dots li.slick-active button {
+    background: #3a7885;
+}
+
+ul.slick-dots li button {
+    width: 15px;
+    height: 15px;
+    float: left;
 }
 
 .modulo{}
@@ -401,7 +417,6 @@ nav{
 
 .box_multimidia li a{
     display: block;
-    padding: 5px;
     position: relative;
 }
 
@@ -413,8 +428,8 @@ nav{
     position: absolute;
     color: #fff;
     opacity: 0;
-    top: 5px;
-    left: 5px;
+    top: 3px;
+    left: 0px;
     border-radius: 5px 0 0 0;
     padding-top: 2px;
     padding-left: 10px;
@@ -472,17 +487,6 @@ nav{
 
 .box_secretarias .item{}
 
-.row > .col-e{
-    padding-right: 15px;
-}
-
-.row .col.div-d{
-    border-right: 1px solid;
-}
-
-.row > .col-d{
-    padding-left: 15px;
-}
 .filter-table{}
 
 .filter-table select{}
@@ -664,3 +668,8 @@ nav{
     margin-left: 12px;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.box_secretarias{}
+
+.box_secretarias .item{}
+

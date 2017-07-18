@@ -49,30 +49,31 @@
     <section class="box1 marginbottom_30">
         <div class="container">
             <div class="linksprincipais">
-                <ul>
-                    <li><a><img src="/media/imagens/icones/clock.png"><span>Horários<br>de Atendimento</span></a></li>
-                    <li><a><img src="/media/imagens/icones/sic.png"><span>e-Sic</span></a></li>
-                    <li><a><img src="/media/imagens/icones/ouvidoria.png"><span>Ouvidoria</span></a></li>
-                    <li><a><img src="/media/imagens/icones/test.png"><span>Editais e<br>Concursos</span></a></li>
-                    <li><a><img src="/media/imagens/icones/boss.png"><span>Perguntas<br>Frequentes</span></a></li>
-                </ul>
+                <div class="linkitem"><a><img src="/media/imagens/icones/clock.png"><span>Horários de Atendimento</span></a></div>
+                <div class="linkitem"><a><img src="/media/imagens/icones/sic.png"><span>e-Sic</span></a></div>
+                <div class="linkitem"><a><img src="/media/imagens/icones/ouvidoria.png"><span>Ouvidoria</span></a></div>
+                <div class="linkitem"><a><img src="/media/imagens/icones/test.png"><span>Editais e Concursos</span></a></div>
+                <div class="linkitem"><a><img src="/media/imagens/icones/boss.png"><span>Perguntas Frequentes</span></a></div>
             </div>
         </div>
     </section>
     <section class="box2 paddingtb_30">
         <div class="container clearfix">
             <div class="row">
-                <div class="col-md-3">
-                    <div class="modulo mclaro box_secretarias">
+                <div class="col-md-3 col-xs-12 col-e">
+                    <div class="modulo mclaro">
                         <div class="titulo_modulo">
                             <span>Secretarias</span>
                         </div>
                         <div class="modulo-content">
-                            
+                            <div class="box_secretarias">
+                                <div class="item">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="modulo mclaro box_editais">
                         <div class="titulo_modulo">
                             <span>Ultimas Publicações</span>
@@ -92,7 +93,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-d">
+                <div class="col-md-3 col-xs-12 col-d">
                     <div class="modulo">
                         <div class="titulo_modulo">
                             <span>Agenda do Prefeito</span>
@@ -183,14 +184,41 @@
         });
 
 
-        $(".regular-slider").slick({
-            autoplay: true,
-            autoplaySpeed: 4000,
+        $(".linksprincipais").slick({
             dots: false,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1
-          });
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 750,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+        
+        $(".box_secretarias").slick({
+            dots: false,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 750,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
     });
     
     $('#yourId').jalendar({

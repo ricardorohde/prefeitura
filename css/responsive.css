@@ -1,12 +1,11 @@
 /* Mobile Styles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     header .header .brasao{
-    width: 100%;
-    text-align: center;
-}
+        width: 100%;
+        text-align: center;
+    }
 header .header .brasao a{
-	
-padding-bottom: 5px;
+    padding-bottom: 5px;
 }
 header .header .brasao img {
     display: inline-block;
@@ -30,21 +29,55 @@ header .header .links {
 }
     
     .linksprincipais{}
+    .linksprincipais .slick-slide a{
+    line-height: inherit;
+}
+    .linksprincipais .linkitem img{
+    margin: 0;
+    margin-bottom: 5px;
+}
+    .linksprincipais .linkitem span{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+}
     
-    .linksprincipais li{}
+    .row-eq-height-m{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 600px) and (max-width: 992px) {
- 
+@media only screen and (min-width: 750px) and (max-width: 970px) {
+    .row-eq-height-m{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
 
 /* Desktop Styles */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1170px) {
   .sy-slides-wrap {
     height: 350px;
 	}
 	.sy-slide > a > img{
 		height: 350px;
 	}
+    
+.row > .col-e{
+    padding-right: 15px;
+}
+
+.row .col.div-d{
+    border-right: 1px solid;
+}
+
+.row > .col-d{
+    padding-left: 15px;
+}
 }
