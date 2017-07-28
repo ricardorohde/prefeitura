@@ -20,7 +20,14 @@
     <script type="text/javascript" src="/lib/jalendar/js/jalendar.min.js"></script>
 </head>
 <body id="buttons">
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9&appId=1828545577414262";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <?php 
     include"modulos/header.php";
 ?>
@@ -34,17 +41,60 @@
                         <li><a href="#slide3"><img src="/thumb.php?w=630&h=350&img=media/noticias/03.jpg" alt="And this is some very long caption for slide 3. Yes, really long."></a></li>
                     </ul>
                 </div>
-                <div class="links col-md-5">
-                    <ul class="row row-eq-height-m">
-                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/nfe.png"><span>Receitas e Despesas</span></a></li>
-                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/archive.svg"><span>Processos Licitatórios</span></a></li>
-                    </ul>
-                    <ul class="row row-eq-height-m">
-                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/law-book.svg"><span>Legislação</span></a></li>
-                        <li class="col-md-6 col-xs-6"><a><img src="/media/imagens/icones/salary.svg"><span>Despesas com Pessoal</span></a></li>
-                    </ul>
+                <div class="col-md-5">
+                    <div class="links_transparencia">
+                        <ul>
+                            <li>
+                                <a>
+                                    <img src="/media/imagens/icones/e-sic.svg">
+                                    <span>Portal da Transparência</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="/media/imagens/icones/call-center.svg">
+                                    <span>Ouvidoria</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="/media/imagens/icones/e-sic.svg">
+                                    <span>Portal E-SIC</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="/media/imagens/icones/e-sic.svg">
+                                    <span>Estrutura Organizacional</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="/media/imagens/icones/e-sic.svg">
+                                    <span>Licitações</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="/media/imagens/icones/e-sic.svg">
+                                    <span>Legislação Municipal</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="/media/imagens/icones/e-sic.svg">
+                                    <span>Contratos e Convênios</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img src="/media/imagens/icones/e-sic.svg">
+                                    <span>Folha de Pagamento</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -133,6 +183,72 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="col-md-6 col-e modulo_avisos">
+                            <div class="modulo">
+                                <div class="titulo_modulo">
+                                    <span>Avisos e Notas</span>        
+                                </div>
+                                <div class="modulo-content">
+                                    <ul>
+                                        <li>
+                                            <div class="data">
+                                                <strong>15</strong>
+                                                <span>Jan</span>
+                                            </div>
+                                            <a class="info">
+                                                <h4>Exemplo de Aviso ou Nota de esclarecimento</h4>
+                                                <span>Processo seletivo de indicação</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="data">
+                                                <strong>15</strong>
+                                                <span>Jan</span>
+                                            </div>
+                                            <a class="info">
+                                                <h4>Exemplo de Aviso ou Nota de esclarecimento</h4>
+                                                <span>Processo seletivo de indicação</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="data">
+                                                <strong>15</strong>
+                                                <span>Jan</span>
+                                            </div>
+                                            <a class="info">
+                                                <h4>Exemplo de Aviso ou Nota de esclarecimento</h4>
+                                                <span>Processo seletivo de indicação</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-d">
+                            <div class="modulo">
+                                <div class="titulo_modulo">
+                                    <span>Editais e Licitações</span>        
+                                </div>
+                                <div class="modulo-content">
+                                    <form class="mod-filtro">
+                                        <label>
+                                            <select>
+                                                <option selected disabled>Escolha uma Opção</option>
+                                                <option>Chamadas</option>
+                                                <option>Licitações</option>
+                                            </select>
+                                        </label>
+                                        <label>
+                                            <select>
+                                                <option selected disabled>Escolha uma Opção</option>
+                                                <option>Chamadas</option>
+                                                <option>Licitações</option>
+                                            </select>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-d">
@@ -153,6 +269,15 @@
                                     }
                                 ?>
                             </div>
+                        </div>
+                    </div>
+                    <div class="modulo">
+                        <div class="titulo_modulo">
+                            <span>No Facebook</span>
+                        </div>
+                        <div class="modulo-content">
+                            <div class="fb-page" data-href="https://www.facebook.com/aponweb/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+                            
                         </div>
                     </div>
                 </div>
@@ -252,6 +377,7 @@
         
         $("#box-multimidia").slick({
             dots: false,
+            arrows: false,
             slidesToShow: 4,
             slidesToScroll: 1,
             responsive: [

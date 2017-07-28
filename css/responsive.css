@@ -21,6 +21,7 @@ header .header .links {
 
 .box_topo .links li a{
     height: 100%;
+    margin-bottom: 10px;
 }
 
 .box_topo .links li a img{
