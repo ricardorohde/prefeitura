@@ -65,7 +65,7 @@
 .filtro-tabela .input {
     width: 100%;
     padding: 8px;
-    height: 35px;
+    height: 45px;
     font-size: 13px;
     font-weight: 400;
     color: #777;
@@ -232,3 +232,17 @@
     border-color: #3a7885;
     color: #fff;
 }
+
+.controles{
+    text-align: center;
+}
+
+.controles a{
+    background: #26a69a;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+}
+
+.controles a i{}

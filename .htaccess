@@ -5,7 +5,8 @@ RewriteEngine On
 ErrorDocument 404 /404.php
 
 RewriteRule ^transparencia/horarios/$ transparencia/horarios.php [L]
-RewriteRule ^transparencia/licitacao/$ transparencia/licitacoes.php [L]
+RewriteRule ^transparencia/licitacoes/$ transparencia/licitacoes.php [L]
+RewriteRule ^transparencia/licitacoes/([^-]*)$ transparencia/licitacoes_item.php?item=$1 [L]
 
 RewriteRule ^noticias/([^-]*)/([^-]*)-([^-]*)$ /noticia.php?cate=$1&id=$2&item=$3 [L]
 RewriteRule ^secretarias/$ /secretarias.php [L]

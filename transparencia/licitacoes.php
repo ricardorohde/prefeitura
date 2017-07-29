@@ -7,7 +7,11 @@
 if(isset($_POST['l_pesquisar'])){
     $l_processo     =   $_POST['l_processo'];
     $l_objeto       =   $_POST['l_objeto'];
-    $l_abertura     =   $_POST['l_abertura'];
+    if($_POST['l_abertura'] != null){
+        $l_abertura     =   date("Y-m-d",strtotime(str_replace('/','-',$_POST['l_abertura'])));
+    }else{
+        $l_abertura =   "";
+    }
     $l_orgao        =   $_POST['l_orgao'];
 }
 ?>
@@ -29,6 +33,7 @@ if(isset($_POST['l_pesquisar'])){
     
     <link rel="stylesheet" href="/css/table.css" type="text/css" />
     <script type="text/javascript" src="/lib/DataTables/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/lib/datetimepicker-master/jquery.datetimepicker.css"/>
 
 </head>
 <body class="noticia">
@@ -57,15 +62,15 @@ if(isset($_POST['l_pesquisar'])){
             <div class="row">
                 <div class="col-md-3">
                     <label>Número de Processo:</label>
-                    <input type="text" class="input" placeholder="" name="l_processo">
+                    <input type="text" class="input" value="<?php echo $l_processo ?>" placeholder="Número do Processo Licitatório" name="l_processo">
                 </div>
                 <div class="col-md-3">
                     <label>Objeto:</label>
-                    <input type="text" class="input" placeholder="" name="l_objeto">
+                    <input type="text" class="input" value="<?php echo $l_objeto ?>" placeholder="Objeto" name="l_objeto">
                 </div>
                 <div class="col-md-3">
                     <label>Abertura:</label>
-                    <input type="text" class="input" placeholder="" name="l_abertura">
+                    <input type="text" class="input" value="<?php echo $_POST['l_abertura'] ?>" id="datetimepicker" placeholder="Escolha uma Data" name="l_abertura" data-date-format='yy-mm-dd'>
                 </div>
                 <div class="col-md-3">
                     
@@ -85,7 +90,7 @@ if(isset($_POST['l_pesquisar'])){
                     </select>
                 </div>
                 <div class="col-md-2 col-md-offset-5 textcenter">
-                    <input type="submit" name="l_pesquisar" class="button btverde">
+                    <input type="submit" name="l_pesquisar" value="Pesquisar" class="button btverde">
                 </div>
             </div>
         </form>
@@ -110,9 +115,9 @@ if(isset($_POST['l_pesquisar'])){
             <tr>
                 <td width="140px"><?php echo $tabela->pl_processo ?></td>
                 <td><?php echo $tabela->pl_objeto ?></td>
-                <td><p><?php echo "<strong>".date("d/m/Y", strtotime($tabela->pl_abertura))."</strong><span>".date("H:i:s", strtotime($tabela->pl_abertura))."</span>" ?></p></td>
+                <td><p><?php echo "<strong>".date("d/m/Y", strtotime($tabela->pl_abertura))." </strong> <span>".date("H:i:s", strtotime($tabela->pl_abertura))."</span>" ?></p></td>
                 <td style="min-width:180px;"><?php echo $tabela->pl_orgao ?></td>
-                <td></td>
+                <td><div class="controles"><a href="/transparencia/licitacoes/<?php echo $tabela->pl_alias ?>">Ver <i class="fa fa-eye" aria-hidden="true"></i></a></div></td>
             </tr>
             <?php
                 }
@@ -129,6 +134,7 @@ if(isset($_POST['l_pesquisar'])){
 </html>
 <?php include   "../includes/footer.php";
 ?>
+<script src="/lib/datetimepicker-master/build/jquery.datetimepicker.full.js"></script>
 <script>
 $(function() {
     $(document).ready(function() {
@@ -144,4 +150,12 @@ $(function() {
 });
     } );
 });
+    
+$('#datetimepicker').datetimepicker({
+	timepicker:false,
+	format:'d/m/Y',
+	formatDate:'Y/m/d',
+});
+    
+$.datetimepicker.setLocale('pt-BR');
 </script>

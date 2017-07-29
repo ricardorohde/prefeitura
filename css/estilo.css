@@ -26,6 +26,9 @@ body{
     background-color: #fff;
     min-height: 100%;
 }
+a{
+    color: #555;
+}
 p{
     font-size: 0.9375em;
     font-weight: 400;
@@ -1117,11 +1120,61 @@ footer .sobre .info span strong {
     text-transform: uppercase;
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    font-weight: 500;
 }
 
 .button.btverde{
     background-color: #26a69a;
     color: #fff;
+}
+
+.edital{}
+
+.edital .item{
+    border: 1px solid #eaeaea;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.edital .item td{
+    padding: 10px;
+    width: 50%;
+    border-bottom: 1px solid #ddd;
+}
+
+.edital .item td:nth-child(odd) {
+    border-right: 1px solid #ddd;
+}
+
+.edital .item td strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3a7885;
+}
+
+.edital .item td span {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.edital .item .files{}
+
+.edital .item .files a{
+    display: block;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #555;
+    line-height: 25px;
+}
+
+.edital .item .files a:hover {
+    text-decoration: underline;
+}
+
+.edital .item .files a:nth-child(even){
+    background: #f1f1f1;
 }
