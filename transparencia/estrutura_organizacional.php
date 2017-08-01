@@ -46,81 +46,49 @@
     <div class="container">
         <div class="row">
             <div class="col-e col-md-9">
+                <?php
+                    $list = $dbh->prepare("SELECT * FROM pw_autoridades ORDER BY pa_prioridade DESC");
+                    $list->execute();
+                        while ( $tabela = $list->fetch(\PDO::FETCH_OBJ) )
+                    {
+                ?>
                 <table class="tabelabase w100 marginbottom_20">
                     <thead>
                         <tr>
-                            <th colspan="2">Autoridade 1</th>
+                            <th colspan="2"><?php echo $tabela->pa_titulo ?></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Autoridade:</strong></td>
-                            <td>Nome da Autoridade</td>
+                            <td><?php echo $tabela->pa_autoridade ?></td>
                         </tr>
                         <tr>
                             <td><strong>Endereço:</strong></td>
-                            <td>Av. Monte líbano 320 Centro</td>
+                            <td><?php echo $tabela->pa_end ?></td>
                         </tr>
                         <tr>
                             <td><strong>Horário:</strong></td>
-                            <td>08h às 12h e 14h às 18h</td>
+                            <td><?php echo $tabela->pa_horario ?></td>
                         </tr>
                         <tr>
                             <td><strong>Email:</strong></td>
-                            <td>contato@apon.com.br</td>
+                            <td><?php echo $tabela->pa_email ?></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Organograma:</strong></td>
+                            <td><a>Visualizar Organograma</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><?php echo $tabela->pa_desc ?></p>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
-                <table class="tabelabase w100 marginbottom_20">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Autoridade 1</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Autoridade:</strong></td>
-                            <td>Nome da Autoridade</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Endereço:</strong></td>
-                            <td>Av. Monte líbano 320 Centro</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Horário:</strong></td>
-                            <td>08h às 12h e 14h às 18h</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Email:</strong></td>
-                            <td>contato@apon.com.br</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="tabelabase w100 marginbottom_20">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Autoridade 1</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Autoridade:</strong></td>
-                            <td>Nome da Autoridade</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Endereço:</strong></td>
-                            <td>Av. Monte líbano 320 Centro</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Horário:</strong></td>
-                            <td>08h às 12h e 14h às 18h</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Email:</strong></td>
-                            <td>contato@apon.com.br</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <?php
+                        }
+                ?>
             </div>
         </div>
     </div>

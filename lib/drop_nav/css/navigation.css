@@ -305,7 +305,7 @@
 .nav-menu > li:hover > a .submenu-indicator-chevron,
 .nav-menu > .active > a .submenu-indicator-chevron,
 .nav-menu > .focus > a .submenu-indicator-chevron {
-  border-color: transparent #3a7885 #3a7885 transparent;
+  
 }
 
 .navigation-portrait .submenu-indicator.submenu-indicator-up {

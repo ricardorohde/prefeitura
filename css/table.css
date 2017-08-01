@@ -43,6 +43,24 @@
     color: #777;
 }
 
+.tabelabase td p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.7);
+    letter-spacing: 0.01rem;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    -webkit-text-rendering: optimizelegibility;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 5px;
+}
+
 .tabelabase td:first-child {
 }
 
@@ -52,7 +70,7 @@
 .filtro-tabela{
     background: #f7f7f7;
     padding: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid #eaeaea;
 }
 

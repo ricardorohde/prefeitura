@@ -721,7 +721,7 @@ ul.slick-dots li button {
 /* BreadCrumbs */
 #breadcrumb{
     background-color: rgba(0,0,0,0.03);
-    border-bottom: rgba(0,0,0,0.03) 1px solid;
+    border-bottom: 1px solid #ddd;
     margin-top: -15px;
     padding: 15px 0;
     margin-bottom: 15px;
@@ -1177,4 +1177,212 @@ footer .sobre .info span strong {
 
 .edital .item .files a:nth-child(even){
     background: #f1f1f1;
+}
+
+#transparencia{
+    margin-bottom: 20px;
+}
+
+#transparencia h4{}
+
+#transparencia ul{
+    padding-left: 10px;
+}
+
+#transparencia ul li{
+    display: block;
+    padding-left: 15px;
+    position: relative;
+}
+
+#transparencia ul li a{
+    font-size: 16px;
+    padding: 7px 0;
+    display: block;
+    position: relative;
+    font-weight: 400;
+}
+
+#transparencia ul li a:hover {
+    text-decoration: underline;
+}
+
+#transparencia ul li a:before {
+    content: "";
+    width: 10px;
+    height: 1px;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    background: #bbb;
+}
+
+#transparencia ul li:after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background: #bbb;
+    left: 0;
+    top: 0;
+}
+
+#transparencia ul li:first-child:after {
+    height: 50%;
+    top: 50%;
+}
+
+#transparencia ul li:last-child:after {
+    height: 50%;
+}
+
+.title{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d8d8d8;
+    height: 35px;
+}
+
+.title span{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #3a7885;
+    padding: 0 5px;
+    font-size: 15px;
+    line-height: 32px;
+    display: inline-block;
+    border-bottom: 3px solid #3a7885;
+}
+
+#accordion{}
+
+#accordion .item{
+    margin-bottom: 5px;
+    border: 0;
+    box-shadow: none;
+}
+
+#accordion .head{}
+
+#accordion .head h4.panel-title{}
+
+#accordion .head h4.panel-title a{
+    border: 1px solid #3a7885;
+    border-bottom: 3px solid #2e5d67;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 40px;
+    height: 55px;
+    font-weight: 600;
+    color: #fff;
+    vertical-align: middle;
+    display: block;
+    background: #3a7885;
+    position: relative;
+}
+#accordion .head h4.panel-title a.collapsed span{
+    background: #a0a0a0;
+    color: #fff;
+}
+
+#accordion .head h4.panel-title a span {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: block;
+    float: left;
+    font-size: 15px;
+    text-align: center;
+    background: #ffffff;
+    color: #4a4a4a;
+    margin: 8px 0;
+    line-height: 25px;
+    margin-right: 5px;
+}
+
+#accordion .head h4.panel-title a:after{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    content: "\f078";
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: 20px;
+    transform: rotate(-180deg);
+    transition: all 0.5s;
+}
+
+#accordion .head h4.panel-title a.collapsed:after {#accordion .head
+    h4.panel-title a: after;
+#accordion .head
+    h4.panel-title a: after;
+    transform: rotate(0deg);
+    color: #999;
+}
+
+#accordion .head h4.panel-title a.collapsed {
+    border: 1px solid #f1f2f7;
+    border-bottom: 3px solid #e4e7ea;
+    color: #3a7885;
+    background: #fff;
+}
+
+#accordion .panel-collapse{
+    background: #f7f7f7;
+    
+}
+#accordion .panel-collapse .body{
+    padding: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.7);
+    letter-spacing: 0.01rem;
+    word-wrap: break-word;
+    -webkit-text-rendering: optimizelegibility;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.box-busca{
+    padding: 5px 30px;
+    border-radius: 30px;
+    background: #eaeaea;
+    margin-bottom: 20px;
+}
+
+.box-busca:after{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    content: "\f002";
+    width: 50px;
+    height: 50px;
+    float: right;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: right;
+    color: #999;
+}
+
+.box-busca input{
+    height: 50px;
+    background: transparent;
+    width: calc(100% - 50px);
 }
