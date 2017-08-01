@@ -5,14 +5,14 @@
 
 //Verifica se foi feito busca
 if(isset($_POST['l_pesquisar'])){
-    $l_processo     =   $_POST['l_processo'];
-    $l_objeto       =   $_POST['l_objeto'];
-    if($_POST['l_abertura'] != null){
-        $l_abertura     =   date("Y-m-d",strtotime(str_replace('/','-',$_POST['l_abertura'])));
+    $l_num     =   $_POST['l_num'];
+    $l_resumo       =   $_POST['l_resumo'];
+    if($_POST['l_data'] != null){
+        $l_data     =   date("Y-m-d",strtotime(str_replace('/','-',$_POST['l_data'])));
     }else{
-        $l_abertura =   "";
+        $l_data =   "";
     }
-    $l_orgao        =   $_POST['l_orgao'];
+    $l_tipo        =   $_POST['l_tipo'];
 }
 ?>
 
@@ -20,7 +20,7 @@ if(isset($_POST['l_pesquisar'])){
 <html lang="pt-br">
 <head> 
 <meta charset="UTF-8">
-    <title>Licitações - <?php echo $sitenome ?></title>
+    <title>Legislação - <?php echo $sitenome ?></title>
     
     <?php include   "../includes/head.php"; ?>
     
@@ -43,40 +43,40 @@ if(isset($_POST['l_pesquisar'])){
                 <a href="<?php echo $siteurl ?>/transparencia/">Transparência</a>
             </li>
             <li>
-                Licitações
+                Legislação
             </li>
         </ol>
-        <h1 class="titulo">Processos Licitatórios</h1>
+        <h1 class="titulo">Leis e Decretos</h1>
     </div>
 </section>
-<section id="licitacao">
+<section id="Leis">
     <div class="container">
         <form class="filtro-tabela" method="post">
             <div class="row">
                 <div class="col-md-3">
-                    <label>Número de Processo:</label>
-                    <input type="text" class="input" value="<?php echo $l_processo ?>" placeholder="Número do Processo Licitatório" name="l_processo">
+                    <label>Número:</label>
+                    <input type="text" class="input" value="<?php echo $l_num ?>" placeholder="Número de Identificação da Lei" name="l_num">
                 </div>
                 <div class="col-md-3">
-                    <label>Objeto:</label>
-                    <input type="text" class="input" value="<?php echo $l_objeto ?>" placeholder="Objeto" name="l_objeto">
+                    <label>Resumo:</label>
+                    <input type="text" class="input" value="<?php echo $l_resumo ?>" placeholder="Resumo da Lei" name="l_resumo">
                 </div>
                 <div class="col-md-3">
-                    <label>Abertura:</label>
-                    <input type="text" class="input" value="<?php echo $_POST['l_abertura'] ?>" id="datetimepicker" placeholder="Escolha uma Data" name="l_abertura" data-date-format='yy-mm-dd'>
+                    <label>Data:</label>
+                    <input type="text" class="input" value="<?php echo $_POST['l_data'] ?>" id="datetimepicker" placeholder="Escolha uma Data" name="l_data" data-date-format='yy-mm-dd'>
                 </div>
                 <div class="col-md-3">
                     
-                    <label>Orgão:</label>
-                    <select class="input" name="l_orgao">
+                    <label>Tipo:</label>
+                    <select class="input" name="l_tipo">
                         <option disabled selected>Tudo</option>
                         <?php
-                        $sel = $dbh->prepare("SELECT * FROM pw_lic GROUP BY pl_orgao ORDER BY pl_orgao ASC");
+                        $sel = $dbh->prepare("SELECT * FROM pw_leis GROUP BY pl_tipo ORDER BY pl_tipo ASC");
                         $sel->execute();
-                        while ( $sel_orgao = $sel->fetch(\PDO::FETCH_OBJ) )
+                        while ( $sel_tipo = $sel->fetch(\PDO::FETCH_OBJ) )
                         {
                         ?>
-                        <option value="<?php echo $sel_orgao->pl_orgao ?>"><?php echo $sel_orgao->pl_orgao ?></option>
+                        <option value="<?php echo $sel_tipo->pl_tipo ?>"><?php echo $sel_tipo->pl_tipo ?></option>
                         <?php
                             }
                         ?>
@@ -91,26 +91,24 @@ if(isset($_POST['l_pesquisar'])){
         <table id="tabela" class="tabela">
         <thead>
             <tr>
-                <th>Nº Processo</th>
-                <th>Objeto</th>
-                <th>Abertura</th>
-                <th>Orgão</th>
-                <th>Ação</th>
+                <th>Tipo:</th>
+                <th>Número + Resumo:</th>
+                <th>Data:</th>
+                <th>Ação:</th>
             </tr>
         </thead>
         <tbody>
             <?php
-                $list = $dbh->prepare("SELECT * FROM pw_lic WHERE pl_processo LIKE '%$l_processo%' AND pl_objeto LIKE '%$l_objeto%' AND pl_abertura LIKE '%$l_abertura%' AND pl_orgao LIKE '%$l_orgao%' ORDER BY pl_id DESC");
+                $list = $dbh->prepare("SELECT * FROM pw_leis WHERE pl_num LIKE '%$l_num%' AND pl_titulo LIKE '%$l_resumo%' AND pl_data LIKE '%$l_data%' AND pl_tipo LIKE '%$l_tipo%' ORDER BY pl_id DESC");
                 $list->execute();
                     while ( $tabela = $list->fetch(\PDO::FETCH_OBJ) )
                 {
             ?>
             <tr>
-                <td width="140px"><?php echo $tabela->pl_processo ?></td>
-                <td><?php echo $tabela->pl_objeto ?></td>
-                <td><p><?php echo "<strong>".date("d/m/Y", strtotime($tabela->pl_abertura))." </strong> <span>".date("H:i:s", strtotime($tabela->pl_abertura))."</span>" ?></p></td>
-                <td style="min-width:180px;"><?php echo $tabela->pl_orgao ?></td>
-                <td><div class="controles"><a href="/transparencia/licitacoes/<?php echo $tabela->pl_alias ?>">Ver <i class="fa fa-eye" aria-hidden="true"></i></a></div></td>
+                <td width="140px"><?php echo $tabela->pl_tipo ?></td>
+                <td><p><strong><?php echo $tabela->pl_num ?></strong><span><?php echo $tabela->pl_titulo ?></span></p></td>
+                <td><p><?php echo "<strong>".date("d/m/Y", strtotime($tabela->pl_data))." </strong> <span>".date("H:i:s", strtotime($tabela->pl_data))."</span>" ?></p></td>
+                <td><div class="controles"><a target="_blank" href="/transparencia/files/<?php echo $tabela->pl_pdf ?>">Ver PDF <i class="fa fa-eye" aria-hidden="true"></i></a></div></td>
             </tr>
             <?php
                 }
