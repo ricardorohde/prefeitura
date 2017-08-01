@@ -107,8 +107,8 @@ if(isset($_POST['l_pesquisar'])){
             <tr>
                 <td width="140px"><?php echo $tabela->pl_tipo ?></td>
                 <td><p><strong><?php echo $tabela->pl_num ?></strong><span><?php echo $tabela->pl_titulo ?></span></p></td>
-                <td><p><?php echo "<strong>".date("d/m/Y", strtotime($tabela->pl_data))." </strong> <span>".date("H:i:s", strtotime($tabela->pl_data))."</span>" ?></p></td>
-                <td><div class="controles"><a target="_blank" href="/transparencia/files/<?php echo $tabela->pl_pdf ?>">Ver PDF <i class="fa fa-eye" aria-hidden="true"></i></a></div></td>
+                <td><p><?php echo date("d/m/Y", strtotime($tabela->pl_data)) ?></p></td>
+                <td><div class="controles"><a target="_blank" href="/transparencia/files<?php echo $tabela->pl_pdf ?>">Ver PDF <i class="fa fa-eye" aria-hidden="true"></i></a></div></td>
             </tr>
             <?php
                 }

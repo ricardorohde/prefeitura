@@ -7,12 +7,13 @@ ErrorDocument 404 /404.php
 RewriteRule ^transparencia/estrutura_organizacional/$ transparencia/estrutura_organizacional.php [L]
 RewriteRule ^transparencia/perguntas/$ transparencia/perguntas.php [L]
 RewriteRule ^transparencia/leis/$ transparencia/leis.php [L]
+RewriteRule ^transparencia/leis/([^-]*)/$ transparencia/legislacao.php?item=$1 [L]
 RewriteRule ^transparencia/licitacoes/$ transparencia/licitacoes.php [L]
 RewriteRule ^transparencia/licitacoes/([^-]*)$ transparencia/licitacoes_item.php?item=$1 [L]
 
 RewriteRule ^noticias/([^-]*)/([^-]*)-([^-]*)$ /noticia.php?cate=$1&id=$2&item=$3 [L]
 RewriteRule ^secretarias/$ /secretarias.php [L]
-RewriteRule ^secretarias/([^-]*)$ /secretaria.php?item=$1& [L]
+RewriteRule ^secretarias/([^-]*)$ /secretaria.php?item=$1 [L]
 
 RewriteRule ^tv/$ /multimidia.php [L]
 RewriteRule ^video/([^-]*)$ /video.php?item=$1 [L]

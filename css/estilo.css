@@ -730,7 +730,12 @@ ul.slick-dots li button {
     margin: 0;
 }
 .breadcrumb li{
-    font-size: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+.breadcrumb li a {
+    font-weight: 600;
     color: #777;
 }
 
