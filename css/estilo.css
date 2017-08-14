@@ -720,7 +720,7 @@ ul.slick-dots li button {
 
 /* BreadCrumbs */
 #breadcrumb{
-    background-color: rgba(0,0,0,0.03);
+    background-color: #f1f1f1;
     border-bottom: 1px solid #ddd;
     margin-top: -15px;
     padding: 15px 0;

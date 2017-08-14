@@ -51,8 +51,8 @@
                 <h4 class="title"><span>Leis e Decretos Municipais</span></h4>
                 <ul>
                     <li><a href="/transparencia/leis/">Buscar todas as leis</a></li>
-                    <li><a href="/transparencia/decretos_suplementares/">Decretos Suplementares</a></li>
-                    <li><a href="/transparencia/decretos_retificados/">Decretos Retificados</a></li>
+                    <li><a href="/transparencia/decretos-suplementares/">Decretos Suplementares</a></li>
+                    <li><a href="/transparencia/decretos-retificados/">Decretos Retificados</a></li>
                     <li><a href="/transparencia/leis/lai/">LAI - Lei de Acesso a informação</a></li>
                     <li><a href="/transparencia/leis/ppa/">PPA - Plano Plurianual</a></li>
                     <li><a href="/transparencia/leis/ldo/">LDO - Lei de Diretrizes Orçamentárias</a></li>

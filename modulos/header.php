@@ -51,20 +51,20 @@
 
     <div class="nav-menus-wrapper">
         <ul class="nav-menu">
-            <li class="active"><a href="#">Início</a></li>
-            <li><a href="#">A cidade</a>
+            <li class="active"><a href="/">Início</a></li>
+            <li><a>A cidade</a>
                 <ul class="nav-dropdown">
-                    <li><a href="#">História</a></li>
+                    <li><a href="/cidade/">História</a></li>
                     <li><a href="#">Pontos Turísticos</a></li>
-                    <li><a href="#">Hino e Bandeiras</a></li>
-                    <li><a href="#">Mapa</a></li>
+                    <li><a href="/cidade/hino">Hino e Bandeiras</a></li>
+                    <li><a href="/cidade/mapa">Mapa</a></li>
                 </ul>
             </li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Transparência</a></li>
-            <li><a href="#">Editais</a></li>
-            <li><a href="#">Secretarias</a></li>
-            <li><a href="#">Multimídia</a></li>
+            <li><a href="/servicos/">Serviços</a></li>
+            <li><a href="/transparencia/">Transparência</a></li>
+            <li><a href="/editais/">Editais</a></li>
+            <li><a href="/secretarias/">Secretarias</a></li>
+            <li><a href="/multimidia/">Multimídia</a></li>
         </ul>
     </div>
 </div>

@@ -8,7 +8,7 @@
 <html lang="pt-br">
 <head> 
 <meta charset="UTF-8">
-    <title>Horários de Atendimento<?php echo " - ". $sitename ?></title>
+    <title>Estrutura Organizacional<?php echo " - ". $sitename ?></title>
     
     <!--- Facebook Meta Tag --->
     <meta property="og:url"                content="<?php echo $urlatual ?>" />
@@ -36,10 +36,10 @@
                 <a href="<?php echo $siteurl ?>/transparencia/">Transparência</a>
             </li>
             <li>
-                Autoridades e Horários de Atendimento
+                Estrutura Organizacional
             </li>
         </ol>
-        <h1 class="titulo">Autoridades e Horários de Atendimento</h1>
+        <h1 class="titulo">Estrutura Organizacional</h1>
     </div>
 </section>
 <section id="horarios">

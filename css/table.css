@@ -68,10 +68,10 @@
 }
 
 .filtro-tabela{
-    background: #f7f7f7;
+    background: #f1f1f1;
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #ddd;
 }
 
 .filtro-tabela label {
@@ -88,13 +88,13 @@
     font-weight: 400;
     color: #777;
     margin-bottom: 10px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #ddd;
 }
 
 .tabela {
   margin-bottom: 10px;
   width: 100%;
-  border: 1px solid #f1f2f7;
+  border: 1px solid #eaeaea;
 }
 
 .tabela thead{}
@@ -155,7 +155,7 @@
 
 .tabela tbody td{
     vertical-align: middle;
-    font-size: 14px;
+    font-size: 13px;
     min-width: 120px;
     color: #555;
     padding: 10px 10px;

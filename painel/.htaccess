@@ -1,0 +1,9 @@
+# Use PHP 5.4
+AddHandler application/x-httpd-php54 .php
+
+RewriteEngine On
+ErrorDocument 404 /404.php
+
+RewriteRule ^transparencia/estrutura_organizacional/$ transparencia/estrutura_organizacional.php [L]
+RewriteRule ^transparencia/perguntas/$ transparencia/perguntas.php [L]
+RewriteRule ^tabelas/$ data-table.php [L]

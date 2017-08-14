@@ -73,7 +73,7 @@ if($item == "ldo"){
                 {
             ?>
             <tr>
-                <td><?php echo $tabela->pl_num." - ".$tabela->pl_titulo ?></td>
+                <td><strong>Lei Nº <?php echo $tabela->pl_num."</strong> - ".$tabela->pl_titulo ?></td>
                 <td><p><?php echo date("d/m/Y", strtotime($tabela->pl_data)) ?></p></td>
                 <td><div class="controles"><a target="_blank" href="/transparencia/files<?php echo $tabela->pl_pdf ?>">Ver PDF <i class="fa fa-eye" aria-hidden="true"></i></a></div></td>
             </tr>

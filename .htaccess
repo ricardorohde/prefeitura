@@ -8,6 +8,7 @@ RewriteRule ^transparencia/estrutura_organizacional/$ transparencia/estrutura_or
 RewriteRule ^transparencia/perguntas/$ transparencia/perguntas.php [L]
 RewriteRule ^transparencia/leis/$ transparencia/leis.php [L]
 RewriteRule ^transparencia/leis/([^-]*)/$ transparencia/legislacao.php?item=$1 [L]
+RewriteRule ^transparencia/decretos-([^-]*)/$ transparencia/decretos.php?item=$1 [L]
 RewriteRule ^transparencia/licitacoes/$ transparencia/licitacoes.php [L]
 RewriteRule ^transparencia/licitacoes/([^-]*)$ transparencia/licitacoes_item.php?item=$1 [L]
 
